@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+
+body {
+    background: #222;
+    color: #fff;
+}
+
+.glich {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50% );
+    font-size: 100px;
+    letter-spacing: 8px;
+    cursor: pointer;
+}
+
+.glich::before, .glich::after {
+    content: "GLICH";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.glich:hover::before {
+    animation: glich 0.4s linear 6;
+    color: #e91e63;
+    z-index: -2;
+}
+
+.glich:hover::after {
+    animation: glich 0.4s linear 6 reverse;
+    color: #2196f3;
+    z-index: -1;
+}
+
+@keyframes glich {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    20% {
+        top: -5px;
+        left: -5px;
+    }
+
+    40% {
+        top: 5px;
+        left: 5px;
+    }
+
+    60% {
+        top: -5px;
+        left: 5px;
+    }
+
+    80% {
+        top: 5px;
+        left: -5px;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+
+
+}
